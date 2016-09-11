@@ -1,0 +1,52 @@
+Problem B
+
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
+
+int main()
+{
+
+	int groups = 0;
+	int g1 = 0;
+	int g2 = 0;
+	int g3 = 0;
+	string orders = "";
+
+
+	cin >> groups;
+	
+	while (groups > 0)
+	{
+
+		cin >> g1;
+		cin >> g2;
+		cin >> g3;
+
+		if( ((g1 <= g2) && (g2 <= g3)) || ((g1 >= g2) && (g2 >= g3)) )
+		{
+			orders += "Ordered \n";
+		}
+		else
+		{
+			orders += "Unordered \n";
+		}
+
+		groups--;
+
+	}
+
+
+
+
+
+	cout << "Gnomes:" << endl;
+	cout << orders;
+
+	return 0;
+
+}
+

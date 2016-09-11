@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+	int numCases = 0;
+	int n = 0;
+	int T = 0;
+	int temp = 0;
+	int total = 0;
+	int count = 0;
+	int whatever = 0;
+
+	cin >> numCases;
+
+	while(numCases > 0)
+	{
+		cin >> n;
+		cin >> T;
+
+		for(int j = 0; j < n; j++)
+		{
+			cin >> temp;
+			total += temp;
+
+			if (total <= T)
+			{
+				count ++;
+			}
+
+		}
+
+		numCases--;
+		whatever++;
+		cout << "Case " + to_string(whatever) + ": " + to_string(count) << endl;
+		total = 0;
+		count = 0;
+	}
+	
+
+	
+	return 0;
+}
